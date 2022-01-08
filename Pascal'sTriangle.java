@@ -33,6 +33,27 @@ class Solution {
     }
 }
 
+//Alternative way
+class Solution {
+    public List<Integer> getRow(int rowIndex) {
+       List<List<Integer>> res = new ArrayList<>();
+        for(int i = 0;i <= rowIndex; i++){
+            List<Integer> num = new ArrayList<Integer>();
+            for(int j = 0;j <= i; j++){
+                if(j == 0 || j == i){
+                    num.add(1);
+                }else{
+                    int a = res.get(i-1).get(j-1);
+                    int b = res.get(i-1).get(j);
+                    num.add(a+b);
+                }
+            }
+            res.add(num);
+        }
+        return res;
+    }
+}
+
 // Time complexity - O(N*M) Space Complexity - O(NM)
 
 // To get element of a pascal triangle at row 5 col 3 thw formula is - ^(R-1) C(C-1) (C is combination vala C) = 4C2 = 4*3/2*1 = 6 is answer. Time complexity of this is O(N)
