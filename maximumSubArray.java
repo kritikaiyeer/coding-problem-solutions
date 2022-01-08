@@ -49,4 +49,27 @@ class Solution {
 
 // has some problems as well
 
-// Optimal
+// Optimal - Kadanes Algorithm
+// 1. initialize max = 1st element of array
+// 2. intialize sum = 0
+// 3. traverse through the array
+// 4. add num[i] to the sum
+// 5. if sum > max make max = sum
+// 6. and now if sum < 0 make sum = 0
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int max = nums[0];
+        int sum = 0;
+        // kadanes algorithm
+        for(int i=0;i<nums.length;i++){
+            sum += nums[i];
+            if(sum > max){
+                max = sum;
+            }
+            if(sum < 0){
+                sum = 0;
+            }
+        }
+        return max;
+    }
+}
