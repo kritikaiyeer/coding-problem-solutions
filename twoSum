@@ -1,0 +1,43 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+       HashMap<Integer,Integer> hm = new HashMap<>();
+    for(int i=0;i<nums.length;i++){
+      if(hm.containsKey(target-nums[i])){
+        return new int[]{hm.get(target-nums[i]),i};
+      }else{
+        hm.put(nums[i],i );
+      }
+    }
+    return new int[]{0,0};
+    }
+   
+}
+
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int i =0;
+        int pos1 =-1;
+        int pos2 = -1;
+        while(i<nums.length){
+            pos1=i;
+            int j=i+1;
+            while(j<nums.length){
+                if(nums[j] == target-nums[pos1]){
+                    pos2 = j;
+                    break;
+                }else{
+                    j++;
+                }
+            }
+            if(pos2 == -1){
+                i++;
+            }else{
+                break;
+            }
+        }
+         int arr[] = new int[]{pos1,pos2};
+    return arr;
+    }
+   
+}
