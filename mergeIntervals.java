@@ -38,4 +38,5 @@ class Solution {
 // 15>10 add 15 to min and max = 18
 // return new array of each pairs,
 // TC: O(NLOGN) O(N)
+// SP: O(N)
 
