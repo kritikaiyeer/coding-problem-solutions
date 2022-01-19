@@ -32,10 +32,10 @@ class Solution {
 }
 // [1,8,15]
 // [6,10,18]
-
+// OPTIMAL SOLUTION
 // 2<3 max = new max = 6
 // 8>6 add 8 to min and max = 10
 // 15>10 add 15 to min and max = 18
 // return new array of each pairs,
-// TC: O(NLOGN) O(N2)
-// SP: O(N2)
+// TC: O(NLOGN) O(N)
+
