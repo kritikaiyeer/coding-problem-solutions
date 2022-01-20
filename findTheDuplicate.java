@@ -47,3 +47,5 @@ class Solution {
         return slow;
     }
 }
+
+//TC: O(N) SP: O(1)
