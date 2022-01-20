@@ -24,7 +24,7 @@ public class HelloWorld{
             }else{
                 arr[k] = R[j];
                 j++;
-                count +=(m + 1) - (l + i);
+                count += n1 - i; // since 1st is greater than all the elements of left will be greater than then j thus add all elements right of i.
             }
         }
         while (i < L.length)
