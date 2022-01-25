@@ -47,26 +47,25 @@ class Solution {
 // Time complexity - 0(N)
 
 class Solution {
-    public int binarySearch(int arr[][], int l,int r, int t){
-        if(r>=l){
-            int mid = l + (r - l)/2;
-            int row = mid/arr[0].length;
-            int col = mid % arr[0].length;
-            if(arr[row][col] == t){
-                return 1;
-            } if(arr[row][col] > t){
-                return binarySearch(arr,l,mid-1,t);
-            }
-            return binarySearch(arr,mid+1,r,t);
-        }
-        return -1;
-    }
-    
     public boolean searchMatrix(int[][] matrix, int target) {
-        int n = (matrix.length*matrix[0].length) - 1;
-       if(binarySearch(matrix,0,n,target) == 1){
-           return true;
-       }
+        int lo = 0;
+        if(matrix.length == 0) return false;
+        int n = matrix.length; 
+        int m = matrix[0].length; 
+        int hi = (n * m) - 1;
+        
+        while(lo <= hi) {
+            int mid = (lo + (hi - lo) / 2);
+            if(matrix[mid/m][mid % m] == target) {
+                return true;
+            }
+            if(matrix[mid/m][mid % m] < target) {
+                lo = mid + 1;
+            }
+            else {
+                hi = mid - 1;
+            }
+        }
         return false;
     }
 }
