@@ -41,3 +41,18 @@ class Solution {
 
 // convert recursive method to dp by storing the result of each recursive call and reducing sub overlaps
 // TC: (N*M) SP: (N*M)
+
+class Solution {
+    
+    public int uniquePaths(int m, int n) {
+        int N = m + n -2; // how? see notebook
+        int r = m -1; // how ? see notebook
+        double res = 1.0;
+        // find NCombinationR
+        for(int i=1;i<=r;i++){
+            res = (res * (N - r + i))/ i; 
+        }
+        return (int)res;
+    }
+}
+// TC: O(N) SP(1);
