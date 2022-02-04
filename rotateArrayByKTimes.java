@@ -4,10 +4,14 @@
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
 
+//BRUTE FORCE--
 class Solution {
     public int[] solution(int[] A, int K) {
         int[] res = new int[A.length];
         int j = K;
+        if(K == 0){
+            return A;
+        }
         while(j != 0){
             res = new int[A.length];
             for(int i=0;i<A.length;i++){
