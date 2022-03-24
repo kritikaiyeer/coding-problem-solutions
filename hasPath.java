@@ -15,6 +15,21 @@ public class GraphProblem1{
         }
         return false;
     }
+    
+    public static boolean hasPathBFS(Map<String, List<String>> graph,String source, String destination){
+        Queue<String> q = new LinkedList<>();
+        q.add(source);
+        while(q.size() > 0){
+            String curr = q.remove();
+            if(curr.equals(destination)){
+                return true;
+            }
+            for(String neighbour: graph.get(curr)){
+                q.add(neighbour);
+            }
+        }
+        return false;
+    }
 
      public static void main(String []args){
         Map<String, List<String>> graph = new HashMap<String, List<String>>();
