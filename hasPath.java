@@ -41,6 +41,8 @@ public class GraphProblem1{
         graph.put("f", new ArrayList<>());
         
         System.out.print(hasPath(graph, "a","d"));
+        System.out.print(hasPathBFS(graph, "a","d")); // true
+        System.out.print(hasPathBFS(graph, "a","k")); // false
 
      }
 }
