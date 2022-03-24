@@ -1,5 +1,5 @@
 // Given a graph and a source and a destination node find if there exists path
-// between two of them.
+// between two of them. given that the graph is acyclic
 import java.util.*;
 
 public class GraphProblem1{
