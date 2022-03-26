@@ -22,7 +22,7 @@ class Solution {
             if(f1 != f2){
                 return f1 - f2;
             }
-            return n1 - n2;
+            return n2 - n1;
         });
     }
 }
